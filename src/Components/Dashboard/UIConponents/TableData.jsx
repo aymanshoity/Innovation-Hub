@@ -4,6 +4,7 @@ import { PiNumberTwo } from "react-icons/pi";
 const TableData = () => {
     return (
         <div>
+            {/* This section will be shown in large screen only */}
             <div className="overflow-x-auto md:block hidden sm:block ">
                 <table className="table border    mx-auto">
                     {/* head */}
@@ -459,6 +460,7 @@ const TableData = () => {
                 </table>
 
             </div>
+            {/* mobile view section */}
             <div className=" block lg:hidden">
                 <div className="m-5 border rounded-box p-2">
 

@@ -13,6 +13,7 @@ const Sidebar = () => {
     // team Routes
     const links = <>
         <div className=" border rounded-box ">
+            {/* different route links */}
             <NavLink to='/designTeam'>
                 <li className="mx-2"><a className=" flex flex-row items-center justify-between  "><span className="flex gap-2 items-center  font-medium "><CiPen className=" text-md" />Design Team</span>
                     <button className="btn btn-sm"><TiPointOfInterest /><h1>+1</h1></button></a></li>
@@ -36,7 +37,6 @@ const Sidebar = () => {
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content ">
                 {/* Page content here */}
-                {/* flex flex-col items-center justify-left */}
                 <Outlet></Outlet>
 
 
@@ -45,6 +45,7 @@ const Sidebar = () => {
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
 
                 <ul className="menu  p-4 w-80  bg-white text-base-content ">
+                    {/* Containg logo and user image */}
                     <div className="flex flex-row items-center justify-between p-4 ">
                         <div className="flex gap-4">
                             <img src="../../../public/logo.png" alt="" />
@@ -60,6 +61,7 @@ const Sidebar = () => {
                         </div>
                     </div>
                     {/* Sidebar content here */}
+                    {/* Route Links */}
                     {links}
                     {/* folders */}
                     <div className="pt-5 flex flex-col justify-between">
