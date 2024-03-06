@@ -1,7 +1,7 @@
 # InnovateHub
 
-## Live Link:
-## Code Link:
+ Live Link:https://innovatehub-2024march.netlify.app/
+ Code Link:https://github.com/aymanshoity/Innovation-Hub
 
 ### the ui is responsive for mobile and desktop/Laptop.
 
