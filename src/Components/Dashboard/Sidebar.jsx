@@ -10,22 +10,23 @@ import { FaRegQuestionCircle } from "react-icons/fa";
 import { PiNumberSquareSeven } from "react-icons/pi";
 const Sidebar = () => {
 
+    // team Routes
     const links = <>
         <div className=" border rounded-box ">
-            <NavLink >
+            <NavLink to='/designTeam'>
                 <li className="mx-2"><a className=" flex flex-row items-center justify-between  "><span className="flex gap-2 items-center  font-medium "><CiPen className=" text-md" />Design Team</span>
                     <button className="btn btn-sm"><TiPointOfInterest /><h1>+1</h1></button></a></li>
 
             </NavLink>
-            <NavLink >
+            <NavLink to='./marketingTeam'>
                 <li className="mx-2"><a className=" flex flex-row items-center justify-between  "><span className="flex gap-2 items-center  font-medium"><HiOutlineMegaphone className="text-md" />Marketing Team</span>
                     <button className="btn btn-sm"><TiPointOfInterest /><h1>+2</h1></button></a></li>
             </NavLink>
-            <NavLink >
+            <NavLink to='./developmentTeam'>
                 <li className="mx-2"><a className=" flex flex-row items-center justify-between  "><span className="flex gap-2 items-center  font-medium"><TbBracketsAngle className="text-md" />Development Team</span>
                     <button className="btn btn-sm"><TiPointOfInterest /><h1>+3</h1></button></a></li>
             </NavLink>
-            <NavLink className="flex gap-2 items-center  font-medium">
+            <NavLink  className="flex gap-2 items-center  font-medium">
                 <li className="mx-2"><a className=" flex flex-row items-center justify-between  "><CiSquarePlus className="text-md" />Create Team</a></li>
             </NavLink>
         </div>
@@ -37,13 +38,13 @@ const Sidebar = () => {
                 {/* Page content here */}
                 {/* flex flex-col items-center justify-left */}
                 <Outlet></Outlet>
-                <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+
 
             </div>
-            <div className="drawer-side border rounded-lg max-h-screen m-5">
+            <div className="drawer-side border rounded-lg h-fit m-5 ">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
 
-                <ul className="menu  p-4 w-80  bg-white text-base-content  ">
+                <ul className="menu  p-4 w-80  bg-white text-base-content ">
                     <div className="flex flex-row items-center justify-between p-4 ">
                         <div className="flex gap-4">
                             <img src="../../../public/logo.png" alt="" />
@@ -60,60 +61,76 @@ const Sidebar = () => {
                     </div>
                     {/* Sidebar content here */}
                     {links}
-                    <div className="pt-5">
-                        <div >
+                    {/* folders */}
+                    <div className="pt-5 flex flex-col justify-between">
+                        <div className="mb-5">
                             <span className="flex flex-row justify-between items-center"><h1>FOLDERS</h1><button className="btn btn-sm">+</button></span>
-                            <div tabIndex={0} className="collapse collapse-arrow">
-                                <div className="collapse-title  font-medium">
-                                    <li><a className="flex flex-row items-center  "><FaRegFolder className="mr-2" />Products</a></li>
-                                </div>
-                                <div className="collapse-content">
+                            <ul className="menu menu-vertical gap-2  ">
+                                <li>
+                                    <details className="flex flex-row justify-between">
+                                        <summary>
+                                            <a className="flex flex-row items-center  "><FaRegFolder className="mr-2" />Products</a>
+                                        </summary>
+                                        <ul className="p-2  rounded-t-none">
+                                            <li><a>Roadmap </a></li>
+                                            <li><a>Feedback</a></li>
+                                            <li><a>Performance</a></li>
+                                            <li><a>Team</a></li>
+                                            <li><a>Analytics</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details className="flex flex-row justify-between">
+                                        <summary>
+                                            <a className="flex flex-row items-center  "><FaRegFolder className="mr-2" />Sales</a>
+                                        </summary>
+                                        <ul className="p-2  rounded-t-none">
+                                            <li><a>Roadmap </a></li>
+                                            <li><a>Link 2</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details className="flex flex-row justify-between">
+                                        <summary>
+                                            <a className="flex flex-row items-center  "><FaRegFolder className="mr-2" />Design</a>
+                                        </summary>
+                                        <ul className="p-2  rounded-t-none">
+                                            <li><a>Roadmap </a></li>
+                                            <li><a>Link 2</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details className="flex flex-row justify-between">
+                                        <summary>
+                                            <a className="flex flex-row items-center  "><FaRegFolder className="mr-2" />Office</a>
+                                        </summary>
+                                        <ul className="p-2  rounded-t-none">
+                                            <li><a>Roadmap </a></li>
+                                            <li><a>Link 2</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li>
+                                    <details className="flex flex-row justify-between">
+                                        <summary>
+                                        <a className="flex flex-row items-center  "><FaRegFolder className="mr-2" />Legal</a>
+                                        </summary>
+                                        
+                                    </details>
+                                </li>
+                            </ul>
 
-                                    <li className="">Roadmap </li>
-                                    <li className="">feedback </li>
-                                    <li className="">Performance </li>
-                                    <li className="">Team </li>
-                                    <li className="">Analytics </li>
-                                </div>
-                            </div>
-                            <div tabIndex={0} className="collapse collapse-arrow">
-                                <div className="collapse-title  font-medium">
-                                    <li><a className="flex flex-row items-center  "><FaRegFolder className="mr-2" />Sales</a></li>
-                                </div>
-                                <div className="collapse-content">
-                                    <li className="">Roadmap </li>
-                                    <li className="">feedback </li>
-                                </div>
-                            </div>
-                            <div tabIndex={0} className="collapse collapse-arrow">
-                                <div className="collapse-title  font-medium">
-                                    <li><a className="flex flex-row items-center  "><FaRegFolder className="mr-2" />Design</a></li>
-                                </div>
-                                <div className="collapse-content">
-                                    <li className="">Roadmap </li>
-                                    <li className="">feedback </li>
-                                </div>
-                            </div>
-                            <div >
-                                <div className="collapse-title  font-medium">
-                                    <li><a className="flex flex-row items-center  "><FaRegFolder className="mr-2" />Office</a></li>
-                                </div>
-
-                            </div>
-                            <div>
-                                <div className="collapse-title  font-medium">
-                                    <li><a className="flex flex-row items-center  "><FaRegFolder className="mr-2" />Legal</a></li>
-                                </div>
-
-                            </div>
                         </div>
                         <div>
                             <ul className="menu   rounded-box">
-                                <li><a className="flex flex-row items-center  "><FiUserPlus className="mr-2" />Invite Teammates</a></li> 
-                                <li><a className="flex flex-row items-center justify-between "><span className="flex flex-row items-center"><FaRegQuestionCircle className="mr-2" />help and first steps</span><button className="btn btn-sm">0/6</button></a></li> 
-                                <li><a className="flex flex-row items-center  justify-between"><span  className="flex flex-row items-center  ">
-                                <PiNumberSquareSeven className="mr-2" />days left on trial</span><button className="btn text-white bg-black btn-sm">Add billing</button></a></li> 
-                                
+                                <li><a className="flex flex-row items-center  "><FiUserPlus className="mr-2" />Invite Teammates</a></li>
+                                <li><a className="flex flex-row items-center justify-between "><span className="flex flex-row items-center"><FaRegQuestionCircle className="mr-2" />help and first steps</span><button className="btn btn-sm">0/6</button></a></li>
+                                <li><a className="flex flex-row items-center  justify-between"><span className="flex flex-row items-center  ">
+                                    <PiNumberSquareSeven className="mr-2" />days left on trial</span><button className="btn text-white bg-black btn-sm">Add billing</button></a></li>
+
                             </ul>
                         </div>
                     </div>

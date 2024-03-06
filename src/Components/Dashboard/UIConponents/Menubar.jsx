@@ -1,4 +1,4 @@
-import { GoPlus } from "react-icons/go";
+
 import { FaRegSquarePlus } from "react-icons/fa6";
 import { TiDownloadOutline } from "react-icons/ti";
 import { HiOutlineSquares2X2 } from "react-icons/hi2";
@@ -6,9 +6,9 @@ import { BsSortNumericDown } from "react-icons/bs";
 import { CiFilter } from "react-icons/ci";
 const Menubar = () => {
     return (
-        <div className="flex lg:flex-row md:flex-row flex-col justify-between items-center">
+        <div className="flex flex-col  md:flex-row   md:gap-6 justify-between items-center">
             <div>
-                <ul className="menu menu-vertical lg:menu-horizontal ">
+                <ul className="menu menu-vertical gap-2 md:menu-horizontal ">
                     <li className="border rounded-lg mr-2">
                         <details>
                             <summary>
@@ -47,7 +47,7 @@ const Menubar = () => {
                 </ul>
             </div>
             <div>
-                <ul className="menu menu-vertical lg:menu-horizontal  ">
+                <ul className="menu menu-vertical gap-2 lg:menu-horizontal  ">
                     <li className=" border rounded-lg mr-2"><a><FaRegSquarePlus />Meeting</a></li>
                     <li className=" border rounded-lg"><a><TiDownloadOutline />Import/Export</a></li>
 
