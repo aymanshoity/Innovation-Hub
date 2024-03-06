@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { CiPen } from "react-icons/ci";
 import { TbBracketsAngle } from "react-icons/tb";
 import { HiOutlineMegaphone } from "react-icons/hi2";
@@ -8,7 +8,7 @@ import { FaRegFolder } from "react-icons/fa6";
 import { FiUserPlus } from "react-icons/fi";
 import { FaRegQuestionCircle } from "react-icons/fa";
 import { PiNumberSquareSeven } from "react-icons/pi";
-const Navbar = () => {
+const Sidebar = () => {
 
     const links = <>
         <div className=" border rounded-box ">
@@ -31,17 +31,19 @@ const Navbar = () => {
         </div>
     </>
     return (
-        <div className="drawer lg:drawer-open h-screen ">
+        <div className="drawer lg:drawer-open  ">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content flex flex-col items-center justify-start">
+            <div className="drawer-content ">
                 {/* Page content here */}
+                {/* flex flex-col items-center justify-left */}
+                <Outlet></Outlet>
                 <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
             </div>
-            <div className="drawer-side border rounded-lg  ">
+            <div className="drawer-side border rounded-lg max-h-screen m-5">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
 
-                <ul className="menu  p-4 w-80  bg-white text-base-content  mx-5">
+                <ul className="menu  p-4 w-80  bg-white text-base-content  ">
                     <div className="flex flex-row items-center justify-between p-4 ">
                         <div className="flex gap-4">
                             <img src="../../../public/logo.png" alt="" />
@@ -106,7 +108,7 @@ const Navbar = () => {
                             </div>
                         </div>
                         <div>
-                            <ul className="menu  w-80 rounded-box">
+                            <ul className="menu   rounded-box">
                                 <li><a className="flex flex-row items-center  "><FiUserPlus className="mr-2" />Invite Teammates</a></li> 
                                 <li><a className="flex flex-row items-center justify-between "><span className="flex flex-row items-center"><FaRegQuestionCircle className="mr-2" />help and first steps</span><button className="btn btn-sm">0/6</button></a></li> 
                                 <li><a className="flex flex-row items-center  justify-between"><span  className="flex flex-row items-center  ">
@@ -122,4 +124,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Sidebar;

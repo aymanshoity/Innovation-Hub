@@ -1,12 +1,13 @@
-import MarketingTeam from "./MarketingTeam";
-import Navbar from "./Navbar";
+import Header from "./UIConponents/Header";
+import Menubar from "./UIConponents/Menubar";
 
 
 const InnovationHubUI = () => {
+   
     return (
-        <div>
-            <Navbar></Navbar>
-            <MarketingTeam></MarketingTeam>
+        <div className="border rounded-lg m-5">
+            <Header></Header>
+            <Menubar></Menubar>
         </div>
     );
 };
